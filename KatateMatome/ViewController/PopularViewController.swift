@@ -1,32 +1,32 @@
 //
-//  ViewController.swift
+//  PopularViewController.swift
 //  KatateMatome
 //
-//  Created by himara2 on 2015/03/03.
+//  Created by himara2 on 2015/03/14.
 //  Copyright (c) 2015年 himara2. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PopularViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
     private var entries = [Entry]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         registerNib()
         
         reload()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         self.tabBarController?.tabBar.hidden = false
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,9 +37,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             bundle: NSBundle.mainBundle()),
             forCellReuseIdentifier: EntryCell.className)
     }
-
+    
     private func reload() {
-        ParseAPI.fetchNewEntries { (entries, error) -> Void in
+        ParseAPI.fetchPopularEntries { (entries, error) -> Void in
             if error != nil {
                 UIAlertView.showAlert(title: "申し訳ありません", message: "データを取得できませんでした。")
             }
@@ -100,4 +100,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
 }
-

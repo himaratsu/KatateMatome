@@ -39,6 +39,9 @@
 		202FBD601AB3C5E70068F3E1 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBD5F1AB3C5E70068F3E1 /* ImobileSdkAds.framework */; };
 		202FBD621AB3C60A0068F3E1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBD611AB3C60A0068F3E1 /* AdSupport.framework */; };
 		202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD631AB3C7620068F3E1 /* Appearance.swift */; };
+		202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */; };
+		202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */; };
+		20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		202FBD5F1AB3C5E70068F3E1 /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
 		202FBD611AB3C60A0068F3E1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		202FBD631AB3C7620068F3E1 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ViewController/MyTabBarController.swift; sourceTree = "<group>"; };
+		20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopularViewController.swift; path = ViewController/PopularViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +259,10 @@
 			isa = PBXGroup;
 			children = (
 				202FBD5A1AB3C4E90068F3E1 /* ViewController.swift */,
+				20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */,
+				202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */,
 				202FBD5D1AB3C50D0068F3E1 /* WebViewController.swift */,
+				202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -359,8 +368,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */,
 				202FBD591AB3C41F0068F3E1 /* CommonExtension.swift in Sources */,
 				202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */,
+				202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */,
 				202FBD3D1AB3416F0068F3E1 /* Entry.swift in Sources */,
 				202FBD401AB341AE0068F3E1 /* Parse.swift in Sources */,
 				202FBD451AB3B9300068F3E1 /* AlertExtension.swift in Sources */,
@@ -368,6 +379,7 @@
 				202FBD5B1AB3C4E90068F3E1 /* ViewController.swift in Sources */,
 				202FBCAA1AA5E8560068F3E1 /* AppDelegate.swift in Sources */,
 				202FBD5E1AB3C50D0068F3E1 /* WebViewController.swift in Sources */,
+				202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
