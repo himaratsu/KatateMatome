@@ -48,11 +48,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="102users" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPt-d6-nvT">
-                        <rect key="frame" x="78" y="52" width="50" height="16.5"/>
+                        <rect key="frame" x="78" y="52" width="60" height="16.5"/>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.38823529411764707" blue="0.47843137254901963" alpha="0.20999999999999999" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16.5" id="3Ka-SB-7wn"/>
-                            <constraint firstAttribute="width" constant="50" id="Zgi-6U-TNo"/>
+                            <constraint firstAttribute="width" constant="60" id="Zgi-6U-TNo"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                         <color key="textColor" red="0.89900988173046992" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

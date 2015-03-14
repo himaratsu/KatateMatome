@@ -73,6 +73,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 75
     }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let entry = entries[indexPath.row]
+        self.performSegueWithIdentifier("showWeb", sender: entry)
+    }
+    
+    
+    // MARK: - Storyboard
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showWeb" {
+            let vc = segue.destinationViewController as WebViewController
+            if let e = sender as? Entry {
+                vc.entry = e
+            }
+        }
+    }
 
 }
 

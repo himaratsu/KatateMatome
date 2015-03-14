@@ -27,7 +27,12 @@ class EntryCell: UITableViewCell {
                     timeLabel.text = dateFormatter.stringFromDate(date)
                 }
                 
-                self.bookmarkLabel.text = "\(entry.hatebu) users"
+                if let hatebu = entry.hatebu {
+                    self.bookmarkLabel.text = "\(hatebu) users"
+                }
+                else {
+                    self.bookmarkLabel.text = "- users"
+                }
             }
         }
     }

@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
         
+        Appearance.adjustAppearance()
+        
         return true
     }
 

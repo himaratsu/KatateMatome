@@ -13,6 +13,7 @@ class ParseAPI: NSObject {
     class func fetchNewEntries(completionHandler: ([Entry]?, NSError?) -> Void) {
         
         let query = PFQuery(className:"Entry")
+        query.orderByDescending("posttime")
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil && objects != nil {
                 // success
