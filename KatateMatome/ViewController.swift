@@ -8,18 +8,71 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak private var tableView: UITableView!
+    private var entries = [Entry]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        registerNib()
+        
+        reload()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private func registerNib() {
+        tableView.registerNib(UINib(nibName: EntryCell.className,
+            bundle: NSBundle.mainBundle()),
+            forCellReuseIdentifier: EntryCell.className)
+    }
 
+    private func reload() {
+        ParseAPI.fetchNewEntries { (entries, error) -> Void in
+            if error != nil {
+                UIAlertView.showAlert(title: "申し訳ありません", message: "データを取得できませんでした。")
+            }
+            else {
+                if let entries = entries {
+                    println(entries)
+                    self.entries = entries
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    
+    // MARK: - UITableViewDataSource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return entries.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(EntryCell.className) as EntryCell
+        
+        let entry = entries[indexPath.row]
+        cell.entry = entry
+        
+        if indexPath.row % 2 == 0 {
+            cell.contentView.backgroundColor = UIColor.color(0xFCFCFC)
+        }
+        else {
+            cell.contentView.backgroundColor = UIColor.color(0xF2F2F2)
+        }
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 75
+    }
 
 }
 
