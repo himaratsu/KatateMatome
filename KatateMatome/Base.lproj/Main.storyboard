@@ -250,7 +250,7 @@
         <!--お気に入り-->
         <scene sceneID="gZc-aT-ucp">
             <objects>
-                <viewController id="WVH-kv-Q1h" sceneMemberID="viewController">
+                <viewController id="WVH-kv-Q1h" customClass="FavViewController" customModule="KatateMatome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dZ1-kc-fDE"/>
                         <viewControllerLayoutGuide type="bottom" id="0wc-Da-MpK"/>
@@ -258,10 +258,27 @@
                     <view key="view" contentMode="scaleToFill" id="riA-oI-y0f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-JO-aNA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WVH-kv-Q1h" id="UNG-pW-Xcr"/>
+                                    <outlet property="delegate" destination="WVH-kv-Q1h" id="yft-hK-BGz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TeR-JO-aNA" secondAttribute="bottom" id="5Fs-Ck-bX3"/>
+                            <constraint firstItem="TeR-JO-aNA" firstAttribute="top" secondItem="riA-oI-y0f" secondAttribute="top" id="7tH-ja-AKP"/>
+                            <constraint firstAttribute="trailing" secondItem="TeR-JO-aNA" secondAttribute="trailing" id="Vqv-NP-t67"/>
+                            <constraint firstItem="TeR-JO-aNA" firstAttribute="leading" secondItem="riA-oI-y0f" secondAttribute="leading" id="zMO-Ob-fDm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="お気に入り" id="Qup-69-QF7"/>
                     <connections>
+                        <outlet property="tableView" destination="TeR-JO-aNA" id="sLs-cs-dvW"/>
                         <segue destination="dYJ-ed-6JT" kind="show" identifier="showWeb" id="x3O-DC-HOM"/>
                     </connections>
                 </viewController>
@@ -338,6 +355,6 @@
         <image name="upload-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E6K-VT-YCs"/>
+        <segue reference="x3O-DC-HOM"/>
     </inferredMetricsTieBreakers>
 </document>

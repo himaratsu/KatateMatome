@@ -10,14 +10,15 @@ import Foundation
 
 class Entry: NSObject {
 
-    var objectId    : String
-    var blogTitle   : String!
-    var link        : String!
-    var title       : String!
-    var posttime    : NSDate!
-    var createdAt   : NSDate!
-    var updatedAt   : NSDate!
-    var hatebu      : Int!
+    dynamic var objectId    : String!
+    dynamic var blogTitle   : String!
+    dynamic var link        : String!
+    dynamic var title       : String!
+    dynamic var posttime    : NSDate!
+    dynamic var createdAt   : NSDate!
+    dynamic var updatedAt   : NSDate!
+    dynamic var hatebu      = 0
+
     
     init(objectId: String, blogTitle: String, link: String, title: String,
         posttime: NSDate, createdAt: NSDate, updatedAt: NSDate, hatebu: Int) {
@@ -41,7 +42,20 @@ class Entry: NSObject {
         self.posttime = pfObject["posttime"] as? NSDate
         self.createdAt = pfObject["createdAt"] as? NSDate
         self.updatedAt = pfObject["updatedAt"] as? NSDate
-        self.hatebu = (pfObject["hatebu"] as? NSNumber) as? Int
+        self.hatebu = ((pfObject["hatebu"] as? NSNumber) as? Int) ?? 0
+        
+        super.init()
+    }
+    
+    init(fromFavEntry favEntry:FavEntry) {
+        self.objectId = favEntry.objectId
+        self.blogTitle = favEntry.blogTitle
+        self.link = favEntry.link
+        self.title = favEntry.title
+        self.posttime = favEntry.posttime
+        self.createdAt = favEntry.createdAt
+        self.updatedAt = favEntry.updatedAt
+        self.hatebu = favEntry.hatebu
         
         super.init()
     }

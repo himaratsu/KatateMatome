@@ -3,6 +3,7 @@
 //
 
 #import <Parse/Parse.h>
+#import <Realm/Realm.h>
 
 #import "ImobileSdkAds/ImobileSdkAds.h"
 #import "ImobileSdkAds/ImobileSdkAdsIconParams.h"

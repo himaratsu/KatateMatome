@@ -2,10 +2,7 @@
 # platform :ios, '6.0'
 
 target 'KatateMatome' do
-  pod 'MagicalRecord'
+  pod 'Realm'
 end
 
-target 'KatateMatomeTests' do
-
-end
 

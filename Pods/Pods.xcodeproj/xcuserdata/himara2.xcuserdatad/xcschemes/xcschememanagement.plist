@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-KatateMatome-MagicalRecord.xcscheme</key>
+		<key>Pods-KatateMatome-Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>512377BFD8BBCE078DBB7951</key>
+		<key>633569776B32E1FFFDF7049A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ABEFFC0A4FF735264617FADE</key>
+		<key>A5B7921BFCF6D652A2E93CD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

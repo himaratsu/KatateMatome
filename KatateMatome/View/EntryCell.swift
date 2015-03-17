@@ -27,12 +27,26 @@ class EntryCell: UITableViewCell {
                     timeLabel.text = dateFormatter.stringFromDate(date)
                 }
                 
-                if let hatebu = entry.hatebu {
-                    self.bookmarkLabel.text = "\(hatebu) users"
+                self.bookmarkLabel.text = "\(entry.hatebu) users"
+                
+            }
+        }
+    }
+    
+    var favEntry: FavEntry? = nil {
+        didSet {
+            if let entry = favEntry {
+                titleLabel.text = entry.title
+                siteNameLabel.text = entry.blogTitle
+                
+                if let date = entry.posttime {
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "MM/dd HH:mm"
+                    timeLabel.text = dateFormatter.stringFromDate(date)
                 }
-                else {
-                    self.bookmarkLabel.text = "- users"
-                }
+                
+                self.bookmarkLabel.text = "\(entry.hatebu) users"
+                
             }
         }
     }
