@@ -29,9 +29,9 @@
                                 <rect key="frame" x="0.0" y="578" width="375" height="40"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kuQ-as-lnJ">
-                                        <rect key="frame" x="42" y="6" width="290" height="29"/>
+                                        <rect key="frame" x="42" y="5" width="290" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="28" id="TnQ-wT-uyh"/>
+                                            <constraint firstAttribute="height" constant="30" id="TnQ-wT-uyh"/>
                                             <constraint firstAttribute="width" constant="290" id="iID-pH-yWc"/>
                                         </constraints>
                                         <segments>
@@ -117,10 +117,10 @@
                                 </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2x-6f-qwy">
-                                <rect key="frame" x="28" y="600" width="47" height="47"/>
+                                <rect key="frame" x="31" y="615" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="LxI-Kr-45E"/>
-                                    <constraint firstAttribute="width" constant="47" id="dBT-8Q-ZRw"/>
+                                    <constraint firstAttribute="height" constant="44" id="LxI-Kr-45E"/>
+                                    <constraint firstAttribute="width" constant="44" id="dBT-8Q-ZRw"/>
                                 </constraints>
                                 <state key="normal" image="left-50">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-58-GeX">
-                                <rect key="frame" x="87" y="600" width="47" height="47"/>
+                                <rect key="frame" x="83" y="613" width="47" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="7H0-t4-IfI"/>
                                     <constraint firstAttribute="height" constant="47" id="Npq-I5-yN4"/>
@@ -143,10 +143,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-cK-jpJ">
-                                <rect key="frame" x="305" y="600" width="47" height="47"/>
+                                <rect key="frame" x="308" y="614" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="DPR-1t-6TP"/>
-                                    <constraint firstAttribute="width" constant="47" id="am3-kG-H3g"/>
+                                    <constraint firstAttribute="height" constant="44" id="DPR-1t-6TP"/>
+                                    <constraint firstAttribute="width" constant="44" id="am3-kG-H3g"/>
                                 </constraints>
                                 <state key="normal" image="upload-50">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,13 +162,13 @@
                             <constraint firstItem="E7V-pc-TBc" firstAttribute="leading" secondItem="D2g-0U-6P3" secondAttribute="leading" id="0Dg-Qs-Pim"/>
                             <constraint firstAttribute="trailing" secondItem="E7V-pc-TBc" secondAttribute="trailing" id="3Lm-Wc-fjE"/>
                             <constraint firstItem="E7V-pc-TBc" firstAttribute="top" secondItem="D2g-0U-6P3" secondAttribute="top" id="OCO-nY-ZPZ"/>
-                            <constraint firstItem="j9V-58-GeX" firstAttribute="leading" secondItem="z2x-6f-qwy" secondAttribute="trailing" constant="12" id="X4h-zw-AC6"/>
+                            <constraint firstItem="j9V-58-GeX" firstAttribute="leading" secondItem="z2x-6f-qwy" secondAttribute="trailing" constant="8" id="X4h-zw-AC6"/>
                             <constraint firstItem="5E1-o5-AAk" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" id="XD3-nL-UCX"/>
-                            <constraint firstItem="5E1-o5-AAk" firstAttribute="top" secondItem="AB9-cK-jpJ" secondAttribute="bottom" constant="20" id="XeE-bS-IZx"/>
-                            <constraint firstItem="j9V-58-GeX" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" constant="-67" id="Y6q-hF-Kbg"/>
+                            <constraint firstItem="5E1-o5-AAk" firstAttribute="top" secondItem="AB9-cK-jpJ" secondAttribute="bottom" constant="9" id="XeE-bS-IZx"/>
+                            <constraint firstItem="j9V-58-GeX" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" constant="-54" id="Y6q-hF-Kbg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AB9-cK-jpJ" secondAttribute="trailing" constant="7" id="ajU-LC-Fuo"/>
                             <constraint firstItem="E7V-pc-TBc" firstAttribute="leading" secondItem="z2x-6f-qwy" secondAttribute="trailing" constant="-75" id="ew9-u1-PTN"/>
-                            <constraint firstItem="z2x-6f-qwy" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" constant="-67" id="wq0-Tr-xAa"/>
+                            <constraint firstItem="z2x-6f-qwy" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" constant="-52" id="wq0-Tr-xAa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="記事タイトル" id="Ggw-Pv-5lo"/>
