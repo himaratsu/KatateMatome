@@ -11,6 +11,7 @@ import UIKit
 class PopularViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak var durationSegmentedControl: UISegmentedControl!
     private var entries = [Entry]()
     
     override func viewDidLoad() {
@@ -39,7 +40,8 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     private func reload() {
-        ParseAPI.fetchPopularEntries { (entries, error) -> Void in
+        let durationMode = Duration(rawValue: durationSegmentedControl.selectedSegmentIndex) ?? .All
+        ParseAPI.fetchPopularEntries(durationMode, completionHandler: { (entries, error) -> Void in
             if error != nil {
                 UIAlertView.showAlert(title: "申し訳ありません", message: "データを取得できませんでした。")
             }
@@ -49,7 +51,8 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
                     self.tableView.reloadData()
                 }
             }
-        }
+
+        })
     }
     
     
@@ -99,4 +102,8 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
 
+    @IBAction func durationSegmentedControlChanged(sender: AnyObject) {
+        reload()
+    }
+    
 }

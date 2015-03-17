@@ -6,6 +6,3 @@
 
 #import "ImobileSdkAds/ImobileSdkAds.h"
 #import "ImobileSdkAds/ImobileSdkAdsIconParams.h"
-
-#import "AwesomeMenu.h"
-#import "AwesomeMenuItem.h"

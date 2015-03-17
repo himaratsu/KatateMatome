@@ -41,8 +41,6 @@
 		202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */; };
 		202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */; };
 		20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */; };
-		20CD77531AB5E64E009C965E /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77501AB5E64E009C965E /* AwesomeMenu.m */; };
-		20CD77541AB5E64E009C965E /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77521AB5E64E009C965E /* AwesomeMenuItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,10 +83,6 @@
 		202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ViewController/MyTabBarController.swift; sourceTree = "<group>"; };
 		20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopularViewController.swift; path = ViewController/PopularViewController.swift; sourceTree = "<group>"; };
-		20CD774F1AB5E64E009C965E /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
-		20CD77501AB5E64E009C965E /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
-		20CD77511AB5E64E009C965E /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
-		20CD77521AB5E64E009C965E /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +135,6 @@
 		202FBCA61AA5E8560068F3E1 /* KatateMatome */ = {
 			isa = PBXGroup;
 			children = (
-				20CD774D1AB5E61B009C965E /* Library */,
 				202FBD411AB3B8F70068F3E1 /* Extension */,
 				202FBD3E1AB341790068F3E1 /* Parse */,
 				202FBD3B1AB340D20068F3E1 /* Model */,
@@ -254,26 +247,6 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		20CD774D1AB5E61B009C965E /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				20CD774E1AB5E64E009C965E /* AwesomeMenu */,
-			);
-			name = Library;
-			sourceTree = "<group>";
-		};
-		20CD774E1AB5E64E009C965E /* AwesomeMenu */ = {
-			isa = PBXGroup;
-			children = (
-				20CD774F1AB5E64E009C965E /* AwesomeMenu.h */,
-				20CD77501AB5E64E009C965E /* AwesomeMenu.m */,
-				20CD77511AB5E64E009C965E /* AwesomeMenuItem.h */,
-				20CD77521AB5E64E009C965E /* AwesomeMenuItem.m */,
-			);
-			name = AwesomeMenu;
-			path = Library/AwesomeMenu;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,9 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */,
-				20CD77541AB5E64E009C965E /* AwesomeMenuItem.m in Sources */,
 				202FBD591AB3C41F0068F3E1 /* CommonExtension.swift in Sources */,
-				20CD77531AB5E64E009C965E /* AwesomeMenu.m in Sources */,
 				202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */,
 				202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */,
 				202FBD3D1AB3416F0068F3E1 /* Entry.swift in Sources */,

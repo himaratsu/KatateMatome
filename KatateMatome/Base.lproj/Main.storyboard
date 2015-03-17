@@ -25,18 +25,50 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="07N-cg-Qdq"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIG-NQ-SXT">
+                                <rect key="frame" x="0.0" y="578" width="375" height="40"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kuQ-as-lnJ">
+                                        <rect key="frame" x="42" y="6" width="290" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="TnQ-wT-uyh"/>
+                                            <constraint firstAttribute="width" constant="290" id="iID-pH-yWc"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="今日"/>
+                                            <segment title="今週"/>
+                                            <segment title="今月"/>
+                                            <segment title="全期間"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.67450980392156867" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="durationSegmentedControlChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="rcY-Vh-yce"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96297474099266644" green="0.98173631905842418" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="kuQ-as-lnJ" secondAttribute="centerY" id="9Na-vt-oeH"/>
+                                    <constraint firstAttribute="height" constant="40" id="R0w-hG-GLG"/>
+                                    <constraint firstAttribute="centerX" secondItem="kuQ-as-lnJ" secondAttribute="centerX" constant="0.5" id="gOv-g6-xPP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nc3-P3-Swe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="JWz-IU-5lh"/>
                             <constraint firstAttribute="trailing" secondItem="nc3-P3-Swe" secondAttribute="trailing" id="Oew-hb-eXQ"/>
                             <constraint firstItem="nc3-P3-Swe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="WE5-Vs-feB"/>
+                            <constraint firstItem="vIG-NQ-SXT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iNP-9E-2ru"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="jPE-jy-RYD"/>
                             <constraint firstAttribute="bottom" secondItem="nc3-P3-Swe" secondAttribute="bottom" id="l1M-AN-Nzp"/>
+                            <constraint firstAttribute="trailing" secondItem="vIG-NQ-SXT" secondAttribute="trailing" id="vR2-rh-Hvq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="人気の記事" id="cMx-TO-R5G"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="durationSegmentedControl" destination="kuQ-as-lnJ" id="FKt-kK-3zs"/>
                         <outlet property="tableView" destination="nc3-P3-Swe" id="Gve-UX-yZX"/>
                         <segue destination="dYJ-ed-6JT" kind="show" identifier="showWeb" id="E6K-VT-YCs"/>
                     </connections>
@@ -306,6 +338,6 @@
         <image name="upload-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Xs-bE-UKP"/>
+        <segue reference="E6K-VT-YCs"/>
     </inferredMetricsTieBreakers>
 </document>
