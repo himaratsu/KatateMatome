@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bI8-eu-ugx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--人気の記事-->
@@ -77,112 +78,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7V-pc-TBc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="dYJ-ed-6JT" id="RCx-gX-pZv"/>
                                 </connections>
                             </webView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeB-6T-owf">
-                                <rect key="frame" x="0.0" y="572" width="375" height="45"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axn-3v-hey">
-                                        <rect key="frame" x="0.0" y="0.0" width="55" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="55" id="4nn-9g-A1T"/>
-                                        </constraints>
-                                        <state key="normal" image="less_then-50">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="backBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="oFn-Uj-1UV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ib-7v-7VA">
-                                        <rect key="frame" x="256" y="0.0" width="51" height="44.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="51" id="Pjf-3P-vnN"/>
-                                        </constraints>
-                                        <state key="normal" image="update-50">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="browserRefreshBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="g6P-a1-OJ9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYU-ic-a48">
-                                        <rect key="frame" x="324" y="0.0" width="51" height="44.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="51" id="TEf-4Y-O4H"/>
-                                        </constraints>
-                                        <state key="normal" image="upload-50">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="browserActionBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="2XX-tk-2RU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2x-6f-qwy">
-                                        <rect key="frame" x="76" y="0.0" width="51" height="44.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="51" id="dBT-8Q-ZRw"/>
-                                        </constraints>
-                                        <state key="normal" image="left-50">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="browserBackBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="Hzp-c5-lU3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-58-GeX">
-                                        <rect key="frame" x="129" y="0.0" width="51" height="44.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="51" id="7H0-t4-IfI"/>
-                                        </constraints>
-                                        <state key="normal" image="right-50">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="browserGoBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="1WY-fx-Ebc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2x-6f-qwy">
+                                <rect key="frame" x="28" y="600" width="47" height="47"/>
                                 <constraints>
-                                    <constraint firstItem="z2x-6f-qwy" firstAttribute="top" secondItem="HeB-6T-owf" secondAttribute="top" id="0zt-S0-62N"/>
-                                    <constraint firstItem="EYU-ic-a48" firstAttribute="leading" secondItem="0ib-7v-7VA" secondAttribute="trailing" constant="17" id="1Pr-Sr-Bf2"/>
-                                    <constraint firstItem="0ib-7v-7VA" firstAttribute="top" secondItem="HeB-6T-owf" secondAttribute="top" id="32s-qv-4Up"/>
-                                    <constraint firstItem="z2x-6f-qwy" firstAttribute="leading" secondItem="axn-3v-hey" secondAttribute="trailing" constant="21" id="Ilg-Td-zBr"/>
-                                    <constraint firstAttribute="bottom" secondItem="j9V-58-GeX" secondAttribute="bottom" constant="0.5" id="Lr8-0C-vYR"/>
-                                    <constraint firstItem="j9V-58-GeX" firstAttribute="top" secondItem="HeB-6T-owf" secondAttribute="top" id="O2S-XU-WE5"/>
-                                    <constraint firstItem="j9V-58-GeX" firstAttribute="leading" secondItem="z2x-6f-qwy" secondAttribute="trailing" constant="2" id="OYt-Xb-rTd"/>
-                                    <constraint firstAttribute="bottom" secondItem="EYU-ic-a48" secondAttribute="bottom" constant="0.5" id="QI7-V4-sxB"/>
-                                    <constraint firstItem="axn-3v-hey" firstAttribute="top" secondItem="HeB-6T-owf" secondAttribute="top" id="VE6-ti-OXr"/>
-                                    <constraint firstItem="EYU-ic-a48" firstAttribute="top" secondItem="HeB-6T-owf" secondAttribute="top" id="d7B-DI-vEH"/>
-                                    <constraint firstAttribute="bottom" secondItem="0ib-7v-7VA" secondAttribute="bottom" constant="0.5" id="eLr-IH-AWe"/>
-                                    <constraint firstAttribute="height" constant="45" id="eur-0Z-uVC"/>
-                                    <constraint firstItem="axn-3v-hey" firstAttribute="leading" secondItem="HeB-6T-owf" secondAttribute="leading" id="f4B-VC-q80"/>
-                                    <constraint firstAttribute="trailing" secondItem="EYU-ic-a48" secondAttribute="trailing" id="gTB-yt-ZZ4"/>
-                                    <constraint firstAttribute="bottom" secondItem="z2x-6f-qwy" secondAttribute="bottom" constant="0.5" id="lpV-sI-fUe"/>
-                                    <constraint firstAttribute="bottom" secondItem="axn-3v-hey" secondAttribute="bottom" id="x6W-TI-ydq"/>
+                                    <constraint firstAttribute="height" constant="47" id="LxI-Kr-45E"/>
+                                    <constraint firstAttribute="width" constant="47" id="dBT-8Q-ZRw"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" image="left-50">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="browserBackBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="Hzp-c5-lU3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-58-GeX">
+                                <rect key="frame" x="87" y="600" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="7H0-t4-IfI"/>
+                                    <constraint firstAttribute="height" constant="47" id="Npq-I5-yN4"/>
+                                </constraints>
+                                <state key="normal" image="right-50">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="browserGoBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="1WY-fx-Ebc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-cK-jpJ">
+                                <rect key="frame" x="305" y="600" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="DPR-1t-6TP"/>
+                                    <constraint firstAttribute="width" constant="47" id="am3-kG-H3g"/>
+                                </constraints>
+                                <state key="normal" image="upload-50">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="browserActionBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="wx8-6f-IFd"/>
+                                    <action selector="browserGoBtnTouched:" destination="dYJ-ed-6JT" eventType="touchUpInside" id="TA8-ws-ewV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="E7V-pc-TBc" firstAttribute="leading" secondItem="D2g-0U-6P3" secondAttribute="leading" id="0Dg-Qs-Pim"/>
                             <constraint firstAttribute="trailing" secondItem="E7V-pc-TBc" secondAttribute="trailing" id="3Lm-Wc-fjE"/>
                             <constraint firstItem="E7V-pc-TBc" firstAttribute="top" secondItem="D2g-0U-6P3" secondAttribute="top" id="OCO-nY-ZPZ"/>
-                            <constraint firstItem="5E1-o5-AAk" firstAttribute="top" secondItem="HeB-6T-owf" secondAttribute="bottom" constant="50" id="P1K-Fi-sUs"/>
-                            <constraint firstItem="5E1-o5-AAk" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" constant="93" id="XD3-nL-UCX"/>
-                            <constraint firstAttribute="trailing" secondItem="HeB-6T-owf" secondAttribute="trailing" id="elF-57-mk8"/>
-                            <constraint firstItem="HeB-6T-owf" firstAttribute="leading" secondItem="D2g-0U-6P3" secondAttribute="leading" id="iJf-l1-gaK"/>
+                            <constraint firstItem="j9V-58-GeX" firstAttribute="leading" secondItem="z2x-6f-qwy" secondAttribute="trailing" constant="12" id="X4h-zw-AC6"/>
+                            <constraint firstItem="5E1-o5-AAk" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" id="XD3-nL-UCX"/>
+                            <constraint firstItem="5E1-o5-AAk" firstAttribute="top" secondItem="AB9-cK-jpJ" secondAttribute="bottom" constant="20" id="XeE-bS-IZx"/>
+                            <constraint firstItem="j9V-58-GeX" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" constant="-67" id="Y6q-hF-Kbg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AB9-cK-jpJ" secondAttribute="trailing" constant="7" id="ajU-LC-Fuo"/>
+                            <constraint firstItem="E7V-pc-TBc" firstAttribute="leading" secondItem="z2x-6f-qwy" secondAttribute="trailing" constant="-75" id="ew9-u1-PTN"/>
+                            <constraint firstItem="z2x-6f-qwy" firstAttribute="top" secondItem="E7V-pc-TBc" secondAttribute="bottom" constant="-67" id="wq0-Tr-xAa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="記事タイトル" id="Ggw-Pv-5lo"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="actionButton" destination="AB9-cK-jpJ" id="8ns-v1-TTF"/>
                         <outlet property="browserBackButton" destination="z2x-6f-qwy" id="UWF-Hb-cP3"/>
                         <outlet property="browserGoButton" destination="j9V-58-GeX" id="yzV-e2-2JT"/>
                         <outlet property="webView" destination="E7V-pc-TBc" id="Mqa-wt-yop"/>
@@ -339,11 +300,9 @@
         <image name="block" width="29" height="29"/>
         <image name="diamond" width="26" height="25"/>
         <image name="left-50" width="25" height="25"/>
-        <image name="less_then-50" width="25" height="25"/>
         <image name="recommend" width="29" height="29"/>
         <image name="right-50" width="25" height="25"/>
         <image name="rocket" width="27" height="30"/>
-        <image name="update-50" width="25" height="25"/>
         <image name="upload-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>

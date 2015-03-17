@@ -17,12 +17,12 @@ extension UIColor {
         return UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
     }
     
-    class func defaultColor() -> UIColor {
-        return UIColor.color(0x00aced, alpha: 1.0)
+    class func defaultColor(alpha: Double = 1.0) -> UIColor {
+        return UIColor.color(0x00aced, alpha: alpha)
     }
     
-    class func defaultBGColor() -> UIColor {
-        return UIColor.color(0xF3E7D9, alpha: 1.0)
+    class func defaultBGColor(alpha: Double = 1.0) -> UIColor {
+        return UIColor.color(0xEBEBEB, alpha: alpha)
     }
 }
 

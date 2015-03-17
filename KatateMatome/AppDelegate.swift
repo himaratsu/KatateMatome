@@ -34,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ImobileSdkAds.registerWithPublisherID("34816", mediaID:"135002", spotID:"349869")
         ImobileSdkAds.startBySpotID("349869")
         
+        
+        // reset badge number
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        
         return true
     }
 
@@ -49,10 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        // reset badge number
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -71,6 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 println("ready")
             }
         }
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        println("failed: \(error)")
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {

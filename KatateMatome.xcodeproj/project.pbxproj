@@ -11,7 +11,6 @@
 		202FBCAF1AA5E8560068F3E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202FBCAD1AA5E8560068F3E1 /* Main.storyboard */; };
 		202FBCB11AA5E8560068F3E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202FBCB01AA5E8560068F3E1 /* Images.xcassets */; };
 		202FBCB41AA5E8560068F3E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202FBCB21AA5E8560068F3E1 /* LaunchScreen.xib */; };
-		202FBCC01AA5E8560068F3E1 /* KatateMatomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBCBF1AA5E8560068F3E1 /* KatateMatomeTests.swift */; };
 		202FBCD81AA5EE840068F3E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBCD71AA5EE840068F3E1 /* SystemConfiguration.framework */; };
 		202FBCDA1AA5EE890068F3E1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBCD91AA5EE890068F3E1 /* StoreKit.framework */; };
 		202FBCDC1AA5EE900068F3E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBCDB1AA5EE900068F3E1 /* Security.framework */; };
@@ -42,17 +41,9 @@
 		202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */; };
 		202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */; };
 		20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */; };
+		20CD77531AB5E64E009C965E /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77501AB5E64E009C965E /* AwesomeMenu.m */; };
+		20CD77541AB5E64E009C965E /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77521AB5E64E009C965E /* AwesomeMenuItem.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		202FBCBA1AA5E8560068F3E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 202FBC9C1AA5E8560068F3E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 202FBCA31AA5E8560068F3E1;
-			remoteInfo = KatateMatome;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		202FBCA41AA5E8560068F3E1 /* KatateMatome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KatateMatome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +52,6 @@
 		202FBCAE1AA5E8560068F3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		202FBCB01AA5E8560068F3E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		202FBCB31AA5E8560068F3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		202FBCB91AA5E8560068F3E1 /* KatateMatomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KatateMatomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		202FBCBE1AA5E8560068F3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		202FBCBF1AA5E8560068F3E1 /* KatateMatomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatateMatomeTests.swift; sourceTree = "<group>"; };
 		202FBCD41AA5EE300068F3E1 /* KatateMatome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KatateMatome-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -95,6 +85,10 @@
 		202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ViewController/MyTabBarController.swift; sourceTree = "<group>"; };
 		20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopularViewController.swift; path = ViewController/PopularViewController.swift; sourceTree = "<group>"; };
+		20CD774F1AB5E64E009C965E /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		20CD77501AB5E64E009C965E /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		20CD77511AB5E64E009C965E /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		20CD77521AB5E64E009C965E /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +117,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		202FBCB61AA5E8560068F3E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -147,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				202FBCA41AA5E8560068F3E1 /* KatateMatome.app */,
-				202FBCB91AA5E8560068F3E1 /* KatateMatomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +141,7 @@
 		202FBCA61AA5E8560068F3E1 /* KatateMatome */ = {
 			isa = PBXGroup;
 			children = (
+				20CD774D1AB5E61B009C965E /* Library */,
 				202FBD411AB3B8F70068F3E1 /* Extension */,
 				202FBD3E1AB341790068F3E1 /* Parse */,
 				202FBD3B1AB340D20068F3E1 /* Model */,
@@ -267,6 +254,26 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		20CD774D1AB5E61B009C965E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				20CD774E1AB5E64E009C965E /* AwesomeMenu */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		20CD774E1AB5E64E009C965E /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				20CD774F1AB5E64E009C965E /* AwesomeMenu.h */,
+				20CD77501AB5E64E009C965E /* AwesomeMenu.m */,
+				20CD77511AB5E64E009C965E /* AwesomeMenuItem.h */,
+				20CD77521AB5E64E009C965E /* AwesomeMenuItem.m */,
+			);
+			name = AwesomeMenu;
+			path = Library/AwesomeMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,24 +294,6 @@
 			productReference = 202FBCA41AA5E8560068F3E1 /* KatateMatome.app */;
 			productType = "com.apple.product-type.application";
 		};
-		202FBCB81AA5E8560068F3E1 /* KatateMatomeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 202FBCC61AA5E8560068F3E1 /* Build configuration list for PBXNativeTarget "KatateMatomeTests" */;
-			buildPhases = (
-				202FBCB51AA5E8560068F3E1 /* Sources */,
-				202FBCB61AA5E8560068F3E1 /* Frameworks */,
-				202FBCB71AA5E8560068F3E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				202FBCBB1AA5E8560068F3E1 /* PBXTargetDependency */,
-			);
-			name = KatateMatomeTests;
-			productName = KatateMatomeTests;
-			productReference = 202FBCB91AA5E8560068F3E1 /* KatateMatomeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,10 +305,6 @@
 				TargetAttributes = {
 					202FBCA31AA5E8560068F3E1 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					202FBCB81AA5E8560068F3E1 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 202FBCA31AA5E8560068F3E1;
 					};
 				};
 			};
@@ -337,7 +322,6 @@
 			projectRoot = "";
 			targets = (
 				202FBCA31AA5E8560068F3E1 /* KatateMatome */,
-				202FBCB81AA5E8560068F3E1 /* KatateMatomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,13 +338,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		202FBCB71AA5E8560068F3E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -369,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */,
+				20CD77541AB5E64E009C965E /* AwesomeMenuItem.m in Sources */,
 				202FBD591AB3C41F0068F3E1 /* CommonExtension.swift in Sources */,
+				20CD77531AB5E64E009C965E /* AwesomeMenu.m in Sources */,
 				202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */,
 				202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */,
 				202FBD3D1AB3416F0068F3E1 /* Entry.swift in Sources */,
@@ -383,23 +362,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		202FBCB51AA5E8560068F3E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				202FBCC01AA5E8560068F3E1 /* KatateMatomeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		202FBCBB1AA5E8560068F3E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 202FBCA31AA5E8560068F3E1 /* KatateMatome */;
-			targetProxy = 202FBCBA1AA5E8560068F3E1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		202FBCAD1AA5E8560068F3E1 /* Main.storyboard */ = {
@@ -458,6 +421,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "f86f9ae3-3d30-4788-96f5-6235647ff665";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -493,6 +457,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "f86f9ae3-3d30-4788-96f5-6235647ff665";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -511,6 +476,7 @@
 				INFOPLIST_FILE = KatateMatome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f86f9ae3-3d30-4788-96f5-6235647ff665";
 				SWIFT_OBJC_BRIDGING_HEADER = "KatateMatome/KatateMatome-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -529,41 +495,8 @@
 				INFOPLIST_FILE = KatateMatome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f86f9ae3-3d30-4788-96f5-6235647ff665";
 				SWIFT_OBJC_BRIDGING_HEADER = "KatateMatome/KatateMatome-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		202FBCC71AA5E8560068F3E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = KatateMatomeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KatateMatome.app/KatateMatome";
-			};
-			name = Debug;
-		};
-		202FBCC81AA5E8560068F3E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = KatateMatomeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KatateMatome.app/KatateMatome";
 			};
 			name = Release;
 		};
@@ -584,15 +517,6 @@
 			buildConfigurations = (
 				202FBCC41AA5E8560068F3E1 /* Debug */,
 				202FBCC51AA5E8560068F3E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		202FBCC61AA5E8560068F3E1 /* Build configuration list for PBXNativeTarget "KatateMatomeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				202FBCC71AA5E8560068F3E1 /* Debug */,
-				202FBCC81AA5E8560068F3E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
