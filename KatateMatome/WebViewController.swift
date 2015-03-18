@@ -30,6 +30,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
         setUpButtonStyle()
         
+        setUpRightBarButton()
     }
     
     private func setUpButtonStyle() {
@@ -44,7 +45,16 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.grayColor().CGColor
     }
-
+    
+    private func setUpRightBarButton() {
+        if let entry = entry {
+            let button = UIBarButtonItem(title: "\(entry.hatebu)users",
+                style: UIBarButtonItemStyle.Done,
+                target: self,
+                action: "showHatebuComment")
+            self.navigationItem.rightBarButtonItem = button
+        }
+    }
 
     // MARK: Toolbar Action
 
@@ -77,6 +87,24 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     func webViewDidFinishLoad(webView: UIWebView) {
         browserBackButton.enabled = webView.canGoBack
         browserGoButton.enabled = webView.canGoForward
+    }
+    
+    
+    func showHatebuComment() {
+        if let entry = entry {
+            let basePath = "http://b.hatena.ne.jp/entry/"
+            
+            var entryLink = entry.link as NSString
+            entryLink.stringByReplacingOccurrencesOfString("http://", withString: "")
+            .stringByReplacingOccurrencesOfString("https://", withString: "",
+                options: nil,
+                range: nil)
+            
+            let pageUrl = "\(basePath)\(entryLink)"
+            println(pageUrl)
+            
+            webView.loadRequest(NSURLRequest(URL: NSURL(string: pageUrl)!))
+        }
     }
 
 

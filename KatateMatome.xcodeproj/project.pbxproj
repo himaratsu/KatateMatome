@@ -40,6 +40,7 @@
 		202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */; };
 		202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */; };
 		20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */; };
+		20C280951AB9BC83009F823E /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C280941AB9BC83009F823E /* SettingTableViewController.swift */; };
 		20CD77571AB8810C009C965E /* FavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77561AB8810C009C965E /* FavHelper.swift */; };
 		20CD77591AB888F0009C965E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CD77581AB888F0009C965E /* Social.framework */; };
 		20CD775B1AB88BFC009C965E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CD775A1AB88BFC009C965E /* Accounts.framework */; };
@@ -90,6 +91,7 @@
 		202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ViewController/MyTabBarController.swift; sourceTree = "<group>"; };
 		20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopularViewController.swift; path = ViewController/PopularViewController.swift; sourceTree = "<group>"; };
+		20C280941AB9BC83009F823E /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingTableViewController.swift; path = ViewController/SettingTableViewController.swift; sourceTree = "<group>"; };
 		20CD77561AB8810C009C965E /* FavHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavHelper.swift; path = Model/Helper/FavHelper.swift; sourceTree = "<group>"; };
 		20CD77581AB888F0009C965E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		20CD775A1AB88BFC009C965E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -266,6 +268,7 @@
 				20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */,
 				20CD77631AB8914C009C965E /* FavViewController.swift */,
 				202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */,
+				20C280941AB9BC83009F823E /* SettingTableViewController.swift */,
 				20CD77651AB9B619009C965E /* WebViewController.swift */,
 				202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */,
 			);
@@ -434,6 +437,7 @@
 				20CD775F1AB88DB6009C965E /* FavActivity.swift in Sources */,
 				202FBCAA1AA5E8560068F3E1 /* AppDelegate.swift in Sources */,
 				20CD77661AB9B619009C965E /* WebViewController.swift in Sources */,
+				20C280951AB9BC83009F823E /* SettingTableViewController.swift in Sources */,
 				20CD77621AB88F69009C965E /* FavEntry.swift in Sources */,
 				20CD77641AB8914C009C965E /* FavViewController.swift in Sources */,
 				202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */,

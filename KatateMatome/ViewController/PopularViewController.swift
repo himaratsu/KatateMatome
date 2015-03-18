@@ -61,6 +61,10 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
         let durationMode = Duration(rawValue: durationSegmentedControl.selectedSegmentIndex) ?? .All
         ParseAPI.fetchPopularEntries(durationMode, completionHandler: { (entries, error) -> Void in
             if error != nil {
+                if error!.code == 120 {
+                    // cache miss ならスルー
+                    return
+                }
                 UIAlertView.showAlert(title: "申し訳ありません", message: "データを取得できませんでした。")
             }
             else {

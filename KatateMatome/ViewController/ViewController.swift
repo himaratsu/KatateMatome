@@ -59,6 +59,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private func reload() {
         ParseAPI.fetchNewEntries { (entries, error) -> Void in
             if error != nil {
+                if error!.code == 120 {
+                    // cache miss ならスルー
+                    return
+                }
                 UIAlertView.showAlert(title: "申し訳ありません", message: "データを取得できませんでした。")
             }
             else {

@@ -22,7 +22,7 @@
 		<key>45D6130C41A13A6196B4BB2AA34CDB7F5303514A</key>
 		<string>..</string>
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
-		<string>..Alamofire/</string>
+		<string>..Alamofire</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/himaratsu/KatateMatome.git</string>
@@ -36,17 +36,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<string>45D6130C41A13A6196B4BB2AA34CDB7F5303514A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Alamofire</string>
+			<string>KatateMatome</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>45D6130C41A13A6196B4BB2AA34CDB7F5303514A</string>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
 			<key>IDESourceControlWCCName</key>
-			<string>KatateMatome</string>
+			<string>KatateMatomeAlamofire</string>
 		</dict>
 	</array>
 </dict>
