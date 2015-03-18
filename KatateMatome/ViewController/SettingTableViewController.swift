@@ -115,7 +115,7 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
         }
         else {
             
-            let shareText = "この2ちゃんまとめリーダー片手で使えて超便利w \(kAppStoreUrl)"
+            let shareText = "この2ちゃんまとめリーダー片手で使えて超便利www \(kAppStoreUrl)"
             
             if buttonIndex == 0 {
                 // twitter
