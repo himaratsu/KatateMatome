@@ -11,11 +11,11 @@ import Foundation
 extension UIAlertView {
     
     class func showAlert(title: String = "", message: String = "") {
-        let alert = UIAlertView(title: title,
-            message: message,
-            delegate: nil,
-            cancelButtonTitle: "OK",
-            otherButtonTitles: "")
+        let alert = UIAlertView()
+        alert.title = title
+        alert.message = message
+        alert.addButtonWithTitle("OK")
+        
         alert.show()
     }
     

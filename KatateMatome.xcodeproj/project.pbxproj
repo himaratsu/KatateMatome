@@ -34,7 +34,6 @@
 		202FBD571AB3C30B0068F3E1 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202FBD551AB3C30B0068F3E1 /* EntryCell.xib */; };
 		202FBD591AB3C41F0068F3E1 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD581AB3C41F0068F3E1 /* CommonExtension.swift */; };
 		202FBD5B1AB3C4E90068F3E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD5A1AB3C4E90068F3E1 /* ViewController.swift */; };
-		202FBD5E1AB3C50D0068F3E1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD5D1AB3C50D0068F3E1 /* WebViewController.swift */; };
 		202FBD601AB3C5E70068F3E1 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBD5F1AB3C5E70068F3E1 /* ImobileSdkAds.framework */; };
 		202FBD621AB3C60A0068F3E1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBD611AB3C60A0068F3E1 /* AdSupport.framework */; };
 		202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD631AB3C7620068F3E1 /* Appearance.swift */; };
@@ -47,6 +46,7 @@
 		20CD775F1AB88DB6009C965E /* FavActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD775E1AB88DB6009C965E /* FavActivity.swift */; };
 		20CD77621AB88F69009C965E /* FavEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77611AB88F69009C965E /* FavEntry.swift */; };
 		20CD77641AB8914C009C965E /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77631AB8914C009C965E /* FavViewController.swift */; };
+		20CD77661AB9B619009C965E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77651AB9B619009C965E /* WebViewController.swift */; };
 		35C7A51B30FD18287E6FCEC5 /* libPods-KatateMatome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A53C00794F65EB604CCC293 /* libPods-KatateMatome.a */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +84,6 @@
 		202FBD551AB3C30B0068F3E1 /* EntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		202FBD581AB3C41F0068F3E1 /* CommonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
 		202FBD5A1AB3C4E90068F3E1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController/ViewController.swift; sourceTree = "<group>"; };
-		202FBD5D1AB3C50D0068F3E1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ../../ZukyunMatome/ZukyunMatome/ViewController/WebViewController.swift; sourceTree = "<group>"; };
 		202FBD5F1AB3C5E70068F3E1 /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
 		202FBD611AB3C60A0068F3E1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		202FBD631AB3C7620068F3E1 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		20CD775E1AB88DB6009C965E /* FavActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavActivity.swift; path = Model/Activity/FavActivity.swift; sourceTree = "<group>"; };
 		20CD77611AB88F69009C965E /* FavEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavEntry.swift; path = Model/Data/FavEntry.swift; sourceTree = "<group>"; };
 		20CD77631AB8914C009C965E /* FavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavViewController.swift; path = ViewController/FavViewController.swift; sourceTree = "<group>"; };
+		20CD77651AB9B619009C965E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AE4F38D347DD721BCC4932C4 /* Pods-KatateMatome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatateMatome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatateMatome/Pods-KatateMatome.debug.xcconfig"; sourceTree = "<group>"; };
 		E330444C0BEC82B44A9F5D1D /* Pods-KatateMatome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatateMatome.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatateMatome/Pods-KatateMatome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,7 +266,7 @@
 				20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */,
 				20CD77631AB8914C009C965E /* FavViewController.swift */,
 				202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */,
-				202FBD5D1AB3C50D0068F3E1 /* WebViewController.swift */,
+				20CD77651AB9B619009C965E /* WebViewController.swift */,
 				202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */,
 			);
 			name = ViewController;
@@ -433,7 +433,7 @@
 				20CD77571AB8810C009C965E /* FavHelper.swift in Sources */,
 				20CD775F1AB88DB6009C965E /* FavActivity.swift in Sources */,
 				202FBCAA1AA5E8560068F3E1 /* AppDelegate.swift in Sources */,
-				202FBD5E1AB3C50D0068F3E1 /* WebViewController.swift in Sources */,
+				20CD77661AB9B619009C965E /* WebViewController.swift in Sources */,
 				20CD77621AB88F69009C965E /* FavEntry.swift in Sources */,
 				20CD77641AB8914C009C965E /* FavViewController.swift in Sources */,
 				202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */,

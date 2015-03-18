@@ -58,12 +58,22 @@
                         <constraints>
                             <constraint firstItem="nc3-P3-Swe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="JWz-IU-5lh"/>
                             <constraint firstAttribute="trailing" secondItem="nc3-P3-Swe" secondAttribute="trailing" id="Oew-hb-eXQ"/>
+                            <constraint firstItem="vIG-NQ-SXT" firstAttribute="bottom" secondItem="nc3-P3-Swe" secondAttribute="bottom" constant="-49" id="UrZ-nv-4Ph"/>
                             <constraint firstItem="nc3-P3-Swe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="WE5-Vs-feB"/>
                             <constraint firstItem="vIG-NQ-SXT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iNP-9E-2ru"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="jPE-jy-RYD"/>
                             <constraint firstAttribute="bottom" secondItem="nc3-P3-Swe" secondAttribute="bottom" id="l1M-AN-Nzp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="ojK-WX-62O"/>
                             <constraint firstAttribute="trailing" secondItem="vIG-NQ-SXT" secondAttribute="trailing" id="vR2-rh-Hvq"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="yIK-8P-iOn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jPE-jy-RYD"/>
+                                <exclude reference="ojK-WX-62O"/>
+                                <exclude reference="yIK-8P-iOn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="人気の記事" id="cMx-TO-R5G"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -259,9 +269,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-JO-aNA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="123" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-JO-aNA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoCell" rowHeight="123" id="VRr-OM-waP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VRr-OM-waP" id="VJb-pU-QzA">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRs-5l-bsv">
+                                                    <rect key="frame" x="77" y="67" width="221" height="37"/>
+                                                    <string key="text">記事画面からお気に入りに追加するとここに表示されます</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="まだお気に入りはありません" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9D-xt-dd6">
+                                                    <rect key="frame" x="77" y="26" width="221" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="WVH-kv-Q1h" id="UNG-pW-Xcr"/>
                                     <outlet property="delegate" destination="WVH-kv-Q1h" id="yft-hK-BGz"/>
@@ -355,6 +389,6 @@
         <image name="upload-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x3O-DC-HOM"/>
+        <segue reference="E6K-VT-YCs"/>
     </inferredMetricsTieBreakers>
 </document>

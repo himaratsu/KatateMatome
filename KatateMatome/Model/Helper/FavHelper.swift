@@ -23,9 +23,7 @@ class FavHelper: NSObject {
         let favEntry = FavEntry(fromEntry: entry)
         let realm = RLMRealm.defaultRealm()
         realm.transactionWithBlock({ () -> Void in
-            realm.addObject(favEntry)
-            
-            println("お気に入り完了")
+            realm.addOrUpdateObject(favEntry)
         })
     }
     

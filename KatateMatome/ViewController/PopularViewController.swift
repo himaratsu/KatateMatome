@@ -12,10 +12,13 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak var durationSegmentedControl: UISegmentedControl!
+    private var refreshControl:UIRefreshControl!
     private var entries = [Entry]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpRefreshControl()
         
         registerNib()
         
@@ -31,6 +34,21 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func setUpRefreshControl() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新",
+            attributes: [NSFontAttributeName:UIFont.systemFontOfSize(12),
+                kCTForegroundColorAttributeName:[UIColor.lightGrayColor().CGColor]
+            ])
+        
+        self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
+    }
+    
+    func refresh() {
+        reload()
     }
     
     private func registerNib() {
@@ -51,6 +69,7 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
                     self.tableView.reloadData()
                 }
             }
+            self.refreshControl.endRefreshing()
 
         })
     }

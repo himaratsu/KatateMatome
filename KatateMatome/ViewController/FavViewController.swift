@@ -11,11 +11,14 @@ import UIKit
 class FavViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    private var refreshControl: UIRefreshControl!
     private var entries: RLMResults?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpRefreshControl()
+        
         registerNib()
     }
     
@@ -30,11 +33,25 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         self.tabBarController?.tabBar.hidden = false
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func setUpRefreshControl() {
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新",
+            attributes: [NSFontAttributeName:UIFont.systemFontOfSize(12),
+                kCTForegroundColorAttributeName:[UIColor.lightGrayColor().CGColor]
+            ])
+        
+        self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
+    }
+    
+    func refresh() {
+        reload()
     }
     
     private func registerNib() {
@@ -46,43 +63,67 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     private func reload() {
         self.entries = FavEntry.allObjects().sortedResultsUsingProperty("posttime", ascending: false)
         tableView.reloadData()
+        
+        self.refreshControl.endRefreshing()
     }
 
     
     // MARK: - UITableViewDataSource
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let entries = entries {
-            return Int(entries.count)
+        if section == 0 {
+            if let entries = entries {
+                return Int(entries.count)
+            }
+            else {
+                return 0
+            }
         }
         else {
-            return 0
+            return (entries?.count == 0) ? 1 : 0
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(EntryCell.className) as EntryCell
         
-        if let entries = entries {
-            let entry = entries[UInt(indexPath.row)] as FavEntry
-            cell.favEntry = entry
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier(EntryCell.className) as EntryCell
             
-            if indexPath.row % 2 == 0 {
-                cell.contentView.backgroundColor = UIColor.color(0xFCFCFC)
+            if let entries = entries {
+                let entry = entries[UInt(indexPath.row)] as FavEntry
+                cell.favEntry = entry
+                
+                if indexPath.row % 2 == 0 {
+                    cell.contentView.backgroundColor = UIColor.color(0xFCFCFC)
+                }
+                else {
+                    cell.contentView.backgroundColor = UIColor.color(0xF2F2F2)
+                }
             }
             else {
-                cell.contentView.backgroundColor = UIColor.color(0xF2F2F2)
+                abort()
             }
+            
+            return cell
         }
         else {
-            abort()
+            // NoCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("NoCell") as UITableViewCell
+            return cell
         }
-        
-        return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 75
+        if indexPath.section == 0 {
+            return 75
+        }
+        else {
+            return 123
+        }
     }
     
     

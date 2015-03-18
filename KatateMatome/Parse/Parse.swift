@@ -25,6 +25,11 @@ class ParseAPI: NSObject {
         
         let query = PFQuery(className:"Entry")
         query.orderByDescending("posttime")
+        if query.hasCachedResult() {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork
+        } else {
+            query.cachePolicy = kPFCachePolicyNetworkOnly
+        }
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil && objects != nil {
                 // success
@@ -50,6 +55,11 @@ class ParseAPI: NSObject {
         
         let query = PFQuery(className:"Entry")
         query.orderByDescending("hatebu")
+        if query.hasCachedResult() {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork
+        } else {
+            query.cachePolicy = kPFCachePolicyNetworkOnly
+        }
         
         // 期間を選択
         var durationDate: NSDate?
