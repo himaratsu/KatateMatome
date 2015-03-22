@@ -32,7 +32,7 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 4
+            return 2
         }
         else {
             return 1
@@ -48,6 +48,7 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel.font = UIFont.systemFontOfSize(15)
         
         if indexPath.section == 1 {
             cell.textLabel.text = "おすすめのアプリ"
@@ -67,8 +68,6 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
         default:
             break
         }
-        
-        cell.textLabel.font = UIFont.systemFontOfSize(14)
 
         return cell
     }

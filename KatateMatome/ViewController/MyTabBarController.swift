@@ -13,6 +13,7 @@ class MyTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.viewControllers?.removeLast()
         // Do any additional setup after loading the view.
     }
 
