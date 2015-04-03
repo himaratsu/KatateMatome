@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-KatateMatome-Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-KatateMatome.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>39B673DDCBF72C2F47F64DE5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>633569776B32E1FFFDF7049A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E869B7EF502B3C04294745A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5B7921BFCF6D652A2E93CD2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

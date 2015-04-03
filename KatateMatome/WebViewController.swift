@@ -73,11 +73,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     @IBAction func browserActionBtnTouched(sender: AnyObject) {
 
         let favActivity = FavActivity()
+        let reportActivity = ReportActivity()
         
         let shareText = "\(entry!.title) \(entry!.link)"
 
         let activityView = UIActivityViewController(activityItems: [entry!, shareText],
-            applicationActivities: [favActivity])
+            applicationActivities: [favActivity, reportActivity])
         self.presentViewController(activityView, animated: true, completion: nil)
     }
 

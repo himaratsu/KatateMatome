@@ -49,6 +49,7 @@
 		20CD77641AB8914C009C965E /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77631AB8914C009C965E /* FavViewController.swift */; };
 		20CD77661AB9B619009C965E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77651AB9B619009C965E /* WebViewController.swift */; };
 		35C7A51B30FD18287E6FCEC5 /* libPods-KatateMatome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A53C00794F65EB604CCC293 /* libPods-KatateMatome.a */; };
+		D99302D41ACE8B9200A22351 /* ReportActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99302D31ACE8B9200A22351 /* ReportActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		20CD77631AB8914C009C965E /* FavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavViewController.swift; path = ViewController/FavViewController.swift; sourceTree = "<group>"; };
 		20CD77651AB9B619009C965E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AE4F38D347DD721BCC4932C4 /* Pods-KatateMatome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatateMatome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KatateMatome/Pods-KatateMatome.debug.xcconfig"; sourceTree = "<group>"; };
+		D99302D31ACE8B9200A22351 /* ReportActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportActivity.swift; path = Model/Activity/ReportActivity.swift; sourceTree = "<group>"; };
 		E330444C0BEC82B44A9F5D1D /* Pods-KatateMatome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KatateMatome.release.xcconfig"; path = "Pods/Target Support Files/Pods-KatateMatome/Pods-KatateMatome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				20CD775E1AB88DB6009C965E /* FavActivity.swift */,
+				D99302D31ACE8B9200A22351 /* ReportActivity.swift */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99302D41ACE8B9200A22351 /* ReportActivity.swift in Sources */,
 				20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */,
 				202FBD591AB3C41F0068F3E1 /* CommonExtension.swift in Sources */,
 				202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */,

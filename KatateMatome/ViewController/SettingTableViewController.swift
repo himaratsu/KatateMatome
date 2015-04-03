@@ -48,23 +48,23 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel.font = UIFont.systemFontOfSize(15)
+        cell.textLabel!.font = UIFont.systemFontOfSize(15)
         
         if indexPath.section == 1 {
-            cell.textLabel.text = "おすすめのアプリ"
+            cell.textLabel!.text = "おすすめのアプリ"
             return cell
         }
         
         switch indexPath.row {
         case 0:
-            cell.textLabel.text = "このアプリを評価する"
+            cell.textLabel!.text = "このアプリを評価する"
         case 1:
-            cell.textLabel.text = "友達に教える"
+            cell.textLabel!.text = "友達に教える"
         case 2:
-            cell.textLabel.text = "ソフトウェアライセンス"
+            cell.textLabel!.text = "ソフトウェアライセンス"
         case 3:
             let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as String
-            cell.textLabel.text = "アプリのバージョン \(appVersion)"
+            cell.textLabel!.text = "アプリのバージョン \(appVersion)"
         default:
             break
         }

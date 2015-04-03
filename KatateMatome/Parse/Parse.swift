@@ -98,4 +98,12 @@ class ParseAPI: NSObject {
         }
     }
     
+    class func postReportEntry(entryId: String, completionHandler: (Bool?, NSError?) -> Void) {
+        
+        let report = PFObject(className: "Report")
+        report["entryId"] = entryId
+        
+        report.saveInBackgroundWithBlock(completionHandler)
+    }
+    
 }
