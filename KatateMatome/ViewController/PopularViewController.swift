@@ -22,7 +22,7 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
         
         registerNib()
         
-        reload()
+        reloadIfNotReview()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -55,6 +55,18 @@ class PopularViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.registerNib(UINib(nibName: EntryCell.className,
             bundle: NSBundle.mainBundle()),
             forCellReuseIdentifier: EntryCell.className)
+    }
+    
+    private func reloadIfNotReview() {
+        ParseAPI.fetchReviewStatus { (isSuccess, error) -> Void in
+            if error != nil {
+                self.reload()
+            }
+            else {
+                ReviewHelper.sharedInstance.isReviewMode = isSuccess!
+                self.reload()
+            }
+        }
     }
     
     private func reload() {

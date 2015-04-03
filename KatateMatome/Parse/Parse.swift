@@ -23,8 +23,20 @@ class ParseAPI: NSObject {
 
     class func fetchNewEntries(completionHandler: ([Entry]?, NSError?) -> Void) {
         
-        let query = PFQuery(className:"Entry")
+        var query = PFQuery(className:"Entry")
+        
+        if ReviewHelper.sharedInstance.isReviewMode {
+            let tetsugakuQuery = PFQuery(className: "Entry")
+            tetsugakuQuery.whereKey("blogTitle", equalTo: "哲学ニュースnwk")
+            
+            let historyQuery = PFQuery(className: "Entry")
+            historyQuery.whereKey("blogTitle", equalTo: "歴史的速報＠2ｃｈ")
+            
+            query = PFQuery.orQueryWithSubqueries([tetsugakuQuery, historyQuery])
+        }
+        
         query.orderByDescending("posttime")
+        
         if query.hasCachedResult() {
             query.cachePolicy = kPFCachePolicyCacheThenNetwork
         } else {
@@ -53,8 +65,20 @@ class ParseAPI: NSObject {
     
     class func fetchPopularEntries(duration: Duration, completionHandler: ([Entry]?, NSError?) -> Void) {
         
-        let query = PFQuery(className:"Entry")
+        var query = PFQuery(className:"Entry")
+        
+        if ReviewHelper.sharedInstance.isReviewMode {
+            let tetsugakuQuery = PFQuery(className: "Entry")
+            tetsugakuQuery.whereKey("blogTitle", equalTo: "哲学ニュースnwk")
+            
+            let historyQuery = PFQuery(className: "Entry")
+            historyQuery.whereKey("blogTitle", equalTo: "歴史的速報＠2ｃｈ")
+         
+            query = PFQuery.orQueryWithSubqueries([tetsugakuQuery, historyQuery])
+        }
+        
         query.orderByDescending("hatebu")
+        
         if query.hasCachedResult() {
             query.cachePolicy = kPFCachePolicyCacheThenNetwork
         } else {
@@ -104,6 +128,25 @@ class ParseAPI: NSObject {
         report["entryId"] = entryId
         
         report.saveInBackgroundWithBlock(completionHandler)
+    }
+    
+    class func fetchReviewStatus(completionHandler: (Bool?, NSError?) -> Void) {
+        
+        let statusQuery = PFQuery(className: "Status")
+        statusQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if let error = error {
+                completionHandler(nil, error)
+            }
+            else {
+                if let obj = objects.first as? PFObject {
+                    let isReview = obj["isReview"] as? Bool
+                    completionHandler(isReview, nil)
+                }
+                else {
+                    completionHandler(false, nil)
+                }
+            }
+        }
     }
     
 }

@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             bundle: NSBundle.mainBundle()),
             forCellReuseIdentifier: EntryCell.className)
     }
-
+    
     private func reload() {
         ParseAPI.fetchNewEntries { (entries, error) -> Void in
             if error != nil {

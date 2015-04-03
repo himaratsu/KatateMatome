@@ -35,13 +35,10 @@ class ReportActivity: UIActivity {
         for item in activityItems {
             println(item)
             if item is Entry {
-                // お気に入りに追加する
+                // 記事を報告する
                 ParseAPI.postReportEntry(item.objectId, completionHandler: { (isSuccess, error) -> Void in
                     if let error = error {
                         println("error occured. \(error)")
-                    }
-                    else {
-                        println("post success. \(isSuccess)")
                     }
                 })
                 break
