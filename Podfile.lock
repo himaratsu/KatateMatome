@@ -7,6 +7,6 @@ DEPENDENCIES:
   - Realm
 
 SPEC CHECKSUMS:
-  Realm: 81adfc7f43f9301f40bbc46d5e8a10aaf71b9504
+  Realm: b9c1fd9defa26aa7276ce938a8df52ec81f24528
 
 COCOAPODS: 0.36.0

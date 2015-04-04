@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "633569776B32E1FFFDF7049A"
+               BlueprintIdentifier = "BBE03DDACA2E58D9FFD2C3C5"
                BuildableName = "libPods-KatateMatome-Realm.a"
                BlueprintName = "Pods-KatateMatome-Realm"
                ReferencedContainer = "container:Pods.xcodeproj">

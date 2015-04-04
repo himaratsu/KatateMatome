@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5B7921BFCF6D652A2E93CD2"
+               BlueprintIdentifier = "B21050623D5C5A330B205E5A"
                BuildableName = "libPods-KatateMatome.a"
                BlueprintName = "Pods-KatateMatome"
                ReferencedContainer = "container:Pods.xcodeproj">
