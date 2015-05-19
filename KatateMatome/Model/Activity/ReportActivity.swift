@@ -40,6 +40,13 @@ class ReportActivity: UIActivity {
                     if let error = error {
                         println("error occured. \(error)")
                     }
+                    else {
+                        let alert = UIAlertView()
+                        alert.title = "ご報告ありがとうございます"
+                        alert.message = "報告頂いたこちらの記事は数時間以内に運営側にて対応いたします。"
+                        alert.addButtonWithTitle("OK")
+                        alert.show()
+                    }
                 })
                 break
             }

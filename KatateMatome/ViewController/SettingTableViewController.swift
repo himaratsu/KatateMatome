@@ -9,8 +9,7 @@
 import UIKit
 import Social
 
-// MARK: FIXME
-private let kAppStoreUrl = "http://yahoo.co.jp"
+private let kAppStoreUrl = "https://itunes.apple.com/app/id978337038?mt=8"
 
 class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, UIActionSheetDelegate {
 
