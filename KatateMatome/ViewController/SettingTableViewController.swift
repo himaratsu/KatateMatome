@@ -17,52 +17,29 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
-    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 2
-        }
-        else {
-            return 1
-        }
+        return 3
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "このアプリについて"
-        }
-        return ""
+        return "このアプリについて"
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel!.font = UIFont.systemFontOfSize(15)
         
-        if indexPath.section == 1 {
-            cell.textLabel!.text = "おすすめのアプリ"
-            return cell
-        }
-        
         switch indexPath.row {
         case 0:
             cell.textLabel!.text = "このアプリを評価する"
         case 1:
             cell.textLabel!.text = "友達に教える"
+//        case 2:
+//            cell.textLabel!.text = "ソフトウェアライセンス"
         case 2:
-            cell.textLabel!.text = "ソフトウェアライセンス"
-        case 3:
             let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
             cell.textLabel!.text = "アプリのバージョン \(appVersion)"
         default:
@@ -75,34 +52,27 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        if indexPath.section == 0 {
-            switch indexPath.row {
-            case 0:
-                UIApplication.sharedApplication().openURL(NSURL(string: kAppStoreUrl)!)
-            case 1:
-                let actionSheet = UIActionSheet()
-                actionSheet.delegate = self
-                actionSheet.title = "友達に教える"
-                actionSheet.addButtonWithTitle("Twitter")
-                actionSheet.addButtonWithTitle("Facebook")
-                actionSheet.addButtonWithTitle("LINE")
-                actionSheet.addButtonWithTitle("キャンセル")
-                actionSheet.cancelButtonIndex = 3
-                
-                actionSheet.showInView(self.view)
-            case 2:
-                // FIXME: ライセンスの表示
-                println("do something...")
-            default:
-                break
-            }
+        switch indexPath.row {
+        case 0:
+            UIApplication.sharedApplication().openURL(NSURL(string: kAppStoreUrl)!)
+        case 1:
+            let actionSheet = UIActionSheet()
+            actionSheet.delegate = self
+            actionSheet.title = "友達に教える"
+            actionSheet.addButtonWithTitle("Twitter")
+            actionSheet.addButtonWithTitle("Facebook")
+            actionSheet.addButtonWithTitle("LINE")
+            actionSheet.addButtonWithTitle("キャンセル")
+            actionSheet.cancelButtonIndex = 3
+            
+            actionSheet.showInView(self.view)
+        case 2:
+            // FIXME: ライセンスの表示
+            println("do something...")
+        default:
+            break
         }
-        else {
-            // 広告の表示
-            // for test
-            ImobileSdkAds.setSpotDelegate("349869", delegate: self)
-            ImobileSdkAds.showBySpotID("349869")
-        }
+        
     }
     
     
