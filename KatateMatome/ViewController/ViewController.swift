@@ -83,7 +83,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(EntryCell.className) as EntryCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(EntryCell.className) as! EntryCell
         
         let entry = entries[indexPath.row]
         cell.entry = entry
@@ -115,7 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showWeb" {
-            let vc = segue.destinationViewController as WebViewController
+            let vc = segue.destinationViewController as! WebViewController
             if let e = sender as? Entry {
                 vc.entry = e
             }

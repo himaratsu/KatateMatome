@@ -47,7 +47,7 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel!.font = UIFont.systemFontOfSize(15)
         
         if indexPath.section == 1 {
@@ -63,7 +63,7 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
         case 2:
             cell.textLabel!.text = "ソフトウェアライセンス"
         case 3:
-            let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as String
+            let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
             cell.textLabel!.text = "アプリのバージョン \(appVersion)"
         default:
             break

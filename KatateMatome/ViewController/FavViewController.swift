@@ -91,10 +91,10 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(EntryCell.className) as EntryCell
+            let cell = tableView.dequeueReusableCellWithIdentifier(EntryCell.className) as! EntryCell
             
             if let entries = entries {
-                let entry = entries[UInt(indexPath.row)] as FavEntry
+                let entry = entries[UInt(indexPath.row)] as! FavEntry
                 cell.favEntry = entry
                 
                 if indexPath.row % 2 == 0 {
@@ -112,7 +112,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
         else {
             // NoCell
-            let cell = tableView.dequeueReusableCellWithIdentifier("NoCell") as UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("NoCell") as! UITableViewCell
             return cell
         }
     }
@@ -131,7 +131,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         if let entries = entries {
-            let entry = entries[UInt(indexPath.row)] as FavEntry
+            let entry = entries[UInt(indexPath.row)] as! FavEntry
             self.performSegueWithIdentifier("showWeb", sender: entry)
         }
     }
@@ -141,7 +141,7 @@ class FavViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showWeb" {
-            let vc = segue.destinationViewController as WebViewController
+            let vc = segue.destinationViewController as! WebViewController
             if let e = sender as? FavEntry {
                 vc.entry = Entry(fromFavEntry: e)
             }

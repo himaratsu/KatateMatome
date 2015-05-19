@@ -36,7 +36,7 @@ class FavActivity: UIActivity {
             println(item)
             if item is Entry {
                 // お気に入りに追加する
-                FavHelper.sharedInstance.favEntry(item as Entry)
+                FavHelper.sharedInstance.favEntry(item as! Entry)
                 break
             }
         }
