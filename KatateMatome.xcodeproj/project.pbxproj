@@ -34,11 +34,9 @@
 		202FBD571AB3C30B0068F3E1 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202FBD551AB3C30B0068F3E1 /* EntryCell.xib */; };
 		202FBD591AB3C41F0068F3E1 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD581AB3C41F0068F3E1 /* CommonExtension.swift */; };
 		202FBD5B1AB3C4E90068F3E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD5A1AB3C4E90068F3E1 /* ViewController.swift */; };
-		202FBD601AB3C5E70068F3E1 /* ImobileSdkAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBD5F1AB3C5E70068F3E1 /* ImobileSdkAds.framework */; };
 		202FBD621AB3C60A0068F3E1 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202FBD611AB3C60A0068F3E1 /* AdSupport.framework */; };
 		202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD631AB3C7620068F3E1 /* Appearance.swift */; };
-		202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */; };
-		202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */; };
+		2064D6581B18AEF000DF976F /* CommonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2064D6571B18AEF000DF976F /* CommonVC.swift */; };
 		20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */; };
 		20C280951AB9BC83009F823E /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C280941AB9BC83009F823E /* SettingTableViewController.swift */; };
 		20CD77571AB8810C009C965E /* FavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CD77561AB8810C009C965E /* FavHelper.swift */; };
@@ -87,11 +85,9 @@
 		202FBD551AB3C30B0068F3E1 /* EntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		202FBD581AB3C41F0068F3E1 /* CommonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
 		202FBD5A1AB3C4E90068F3E1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController/ViewController.swift; sourceTree = "<group>"; };
-		202FBD5F1AB3C5E70068F3E1 /* ImobileSdkAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImobileSdkAds.framework; sourceTree = "<group>"; };
 		202FBD611AB3C60A0068F3E1 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		202FBD631AB3C7620068F3E1 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
-		202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
-		202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ViewController/MyTabBarController.swift; sourceTree = "<group>"; };
+		2064D6571B18AEF000DF976F /* CommonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonVC.swift; sourceTree = "<group>"; };
 		20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopularViewController.swift; path = ViewController/PopularViewController.swift; sourceTree = "<group>"; };
 		20C280941AB9BC83009F823E /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingTableViewController.swift; path = ViewController/SettingTableViewController.swift; sourceTree = "<group>"; };
 		20CD77561AB8810C009C965E /* FavHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavHelper.swift; path = Model/Helper/FavHelper.swift; sourceTree = "<group>"; };
@@ -128,7 +124,6 @@
 				202FBCE01AA5EE9A0068F3E1 /* MobileCoreServices.framework in Frameworks */,
 				202FBCDE1AA5EE940068F3E1 /* QuartzCore.framework in Frameworks */,
 				202FBCDC1AA5EE900068F3E1 /* Security.framework in Frameworks */,
-				202FBD601AB3C5E70068F3E1 /* ImobileSdkAds.framework in Frameworks */,
 				202FBCDA1AA5EE890068F3E1 /* StoreKit.framework in Frameworks */,
 				202FBCD81AA5EE840068F3E1 /* SystemConfiguration.framework in Frameworks */,
 				202FBD511AB3B9B30068F3E1 /* Bolts.framework in Frameworks */,
@@ -207,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				202FBD611AB3C60A0068F3E1 /* AdSupport.framework */,
-				202FBD5F1AB3C5E70068F3E1 /* ImobileSdkAds.framework */,
 				202FBD501AB3B9B30068F3E1 /* Bolts.framework */,
 				202FBCEB1AA5EECB0068F3E1 /* libsqlite3.dylib */,
 				202FBCE91AA5EEC40068F3E1 /* libz.dylib */,
@@ -271,10 +265,9 @@
 				202FBD5A1AB3C4E90068F3E1 /* ViewController.swift */,
 				20AA9DD41AB3CD5D00DD60D9 /* PopularViewController.swift */,
 				20CD77631AB8914C009C965E /* FavViewController.swift */,
-				202FBD651AB3CB1F0068F3E1 /* RecommendViewController.swift */,
 				20C280941AB9BC83009F823E /* SettingTableViewController.swift */,
 				20CD77651AB9B619009C965E /* WebViewController.swift */,
-				202FBD671AB3CBD50068F3E1 /* MyTabBarController.swift */,
+				2064D6571B18AEF000DF976F /* CommonVC.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -435,7 +428,6 @@
 				20AA9DD51AB3CD5D00DD60D9 /* PopularViewController.swift in Sources */,
 				202FBD591AB3C41F0068F3E1 /* CommonExtension.swift in Sources */,
 				202FBD641AB3C7620068F3E1 /* Appearance.swift in Sources */,
-				202FBD681AB3CBD50068F3E1 /* MyTabBarController.swift in Sources */,
 				202FBD3D1AB3416F0068F3E1 /* Entry.swift in Sources */,
 				202FBD401AB341AE0068F3E1 /* Parse.swift in Sources */,
 				D9720DCF1ACE90D4009298C0 /* ReviewHelper.swift in Sources */,
@@ -446,10 +438,10 @@
 				20CD775F1AB88DB6009C965E /* FavActivity.swift in Sources */,
 				202FBCAA1AA5E8560068F3E1 /* AppDelegate.swift in Sources */,
 				20CD77661AB9B619009C965E /* WebViewController.swift in Sources */,
+				2064D6581B18AEF000DF976F /* CommonVC.swift in Sources */,
 				20C280951AB9BC83009F823E /* SettingTableViewController.swift in Sources */,
 				20CD77621AB88F69009C965E /* FavEntry.swift in Sources */,
 				20CD77641AB8914C009C965E /* FavViewController.swift in Sources */,
-				202FBD661AB3CB1F0068F3E1 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopularViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PopularViewController: CommonVC, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak var durationSegmentedControl: UISegmentedControl!

@@ -11,7 +11,7 @@ import Social
 
 private let kAppStoreUrl = "https://itunes.apple.com/app/id978337038?mt=8"
 
-class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, UIActionSheetDelegate {
+class SettingTableViewController: UITableViewController, UIActionSheetDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,14 +130,5 @@ class SettingTableViewController: UITableViewController, IMobileSdkAdsDelegate, 
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
-    
-    
-    func imobileSdkAdsSpotIsNotReady(spotId: String!) {
-        println("not ready")
-    }
-    
-    func imobileSdkAdsSpot(spotId: String!, didFailWithValue value: ImobileSdkAdsFailResult) {
-        println("fail")
-        
-    }
+
 }

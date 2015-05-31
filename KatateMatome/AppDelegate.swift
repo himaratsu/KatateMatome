@@ -26,15 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Appearance.adjustAppearance()
         
-        
-        //        ImobileSdkAds.registerWithPublisherID("36648", mediaID:"148367", spotID:"384175")
-        //        ImobileSdkAds.startBySpotID("384175")
-        
-        // for test
-        ImobileSdkAds.registerWithPublisherID("34816", mediaID:"135002", spotID:"349869")
-        ImobileSdkAds.startBySpotID("349869")
-        
-        
         // reset badge number
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         

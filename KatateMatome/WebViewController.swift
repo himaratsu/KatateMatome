@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WebViewController: UIViewController, UIWebViewDelegate {
+class WebViewController: CommonVC, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
     var entry: Entry?

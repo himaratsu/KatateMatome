@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bI8-eu-ugx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bI8-eu-ugx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="2204.5" y="383.5"/>
         </scene>
-        <!--My Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="zgZ-fN-dYr">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bI8-eu-ugx" customClass="MyTabBarController" customModule="KatateMatome" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bI8-eu-ugx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -211,7 +211,6 @@
                         <segue destination="qwN-LO-Yy4" kind="relationship" relationship="viewControllers" id="3y6-Pj-hjj"/>
                         <segue destination="nOd-aR-qoV" kind="relationship" relationship="viewControllers" id="Okp-wd-Xsi"/>
                         <segue destination="XZ5-kZ-8cg" kind="relationship" relationship="viewControllers" id="m6U-jD-nSl"/>
-                        <segue destination="Wly-8f-MOf" kind="relationship" relationship="viewControllers" id="uAG-Lx-cdV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdu-I3-xc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -280,21 +279,35 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VRr-OM-waP" id="VJb-pU-QzA">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRs-5l-bsv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRs-5l-bsv">
                                                     <rect key="frame" x="77" y="67" width="221" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="221" id="0PG-qA-17g"/>
+                                                        <constraint firstAttribute="height" constant="37" id="u5g-pZ-5aa"/>
+                                                    </constraints>
                                                     <string key="text">記事画面からお気に入りに
 追加するとここに表示されます</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="まだお気に入りはありません" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9D-xt-dd6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まだお気に入りはありません" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9D-xt-dd6">
                                                     <rect key="frame" x="77" y="26" width="221" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="oqo-qS-cZh"/>
+                                                        <constraint firstAttribute="width" constant="221" id="xDz-0C-N5g"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="gRs-5l-bsv" secondAttribute="centerX" id="9L6-e5-mj2"/>
+                                                <constraint firstItem="gRs-5l-bsv" firstAttribute="top" secondItem="H9D-xt-dd6" secondAttribute="bottom" constant="20" id="Xcb-Px-hTw"/>
+                                                <constraint firstAttribute="centerX" secondItem="H9D-xt-dd6" secondAttribute="centerX" id="gGJ-MM-meK"/>
+                                                <constraint firstItem="H9D-xt-dd6" firstAttribute="top" secondItem="VJb-pU-QzA" secondAttribute="top" constant="26" id="vRO-ha-Ick"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -348,26 +361,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RlQ-gN-l0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1601.5" y="1970.5"/>
-        </scene>
-        <!--おすすめ-->
-        <scene sceneID="NhJ-0I-kYs">
-            <objects>
-                <viewController id="Wly-8f-MOf" customClass="RecommendViewController" customModule="KatateMatome" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="44h-o5-aeR"/>
-                        <viewControllerLayoutGuide type="bottom" id="weE-7J-TzF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mBM-Xi-HhZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="おすすめ" image="recommend" id="f7b-SD-HqD"/>
-                    <navigationItem key="navigationItem" id="ssf-Rm-I2X"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ck6-7C-AEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1149.5" y="2824.5"/>
         </scene>
         <!--新着-->
         <scene sceneID="MV6-Ig-snY">
@@ -431,13 +424,12 @@
         <image name="block" width="29" height="29"/>
         <image name="diamond" width="26" height="25"/>
         <image name="left-50" width="25" height="25"/>
-        <image name="recommend" width="29" height="29"/>
         <image name="right-50" width="25" height="25"/>
         <image name="rocket" width="27" height="30"/>
         <image name="setting" width="30" height="30"/>
         <image name="upload-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E6K-VT-YCs"/>
+        <segue reference="x3O-DC-HOM"/>
     </inferredMetricsTieBreakers>
 </document>

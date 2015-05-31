@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FavViewController: CommonVC, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     private var refreshControl: UIRefreshControl!
