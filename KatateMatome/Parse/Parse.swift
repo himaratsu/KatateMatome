@@ -26,13 +26,8 @@ class ParseAPI: NSObject {
         var query = PFQuery(className:"Entry")
         
         if ReviewHelper.sharedInstance.isReviewMode {
-            let tetsugakuQuery = PFQuery(className: "Entry")
-            tetsugakuQuery.whereKey("blogTitle", equalTo: "哲学ニュースnwk")
-            
-            let historyQuery = PFQuery(className: "Entry")
-            historyQuery.whereKey("blogTitle", equalTo: "歴史的速報＠2ｃｈ")
-            
-            query = PFQuery.orQueryWithSubqueries([tetsugakuQuery, historyQuery])
+            self.fetchWhiteListNewEntries(completionHandler)
+            return
         }
         
         query.orderByDescending("posttime")
@@ -68,13 +63,8 @@ class ParseAPI: NSObject {
         var query = PFQuery(className:"Entry")
         
         if ReviewHelper.sharedInstance.isReviewMode {
-            let tetsugakuQuery = PFQuery(className: "Entry")
-            tetsugakuQuery.whereKey("blogTitle", equalTo: "哲学ニュースnwk")
-            
-            let historyQuery = PFQuery(className: "Entry")
-            historyQuery.whereKey("blogTitle", equalTo: "歴史的速報＠2ｃｈ")
-         
-            query = PFQuery.orQueryWithSubqueries([tetsugakuQuery, historyQuery])
+            fetchWhiteListPopularEntries(duration, completionHandler: completionHandler)
+            return
         }
         
         query.orderByDescending("hatebu")
@@ -145,6 +135,87 @@ class ParseAPI: NSObject {
                 else {
                     completionHandler(false, nil)
                 }
+            }
+        }
+    }
+    
+    
+    // MARK: - WhiteList Mode
+    
+    class func fetchWhiteListNewEntries(completionHandler: ([Entry]?, NSError?) -> Void) {
+        var query = PFQuery(className:"WhiteListEntry")
+        
+        query.orderByDescending("posttime")
+        
+        if query.hasCachedResult() {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork
+        } else {
+            query.cachePolicy = kPFCachePolicyNetworkOnly
+        }
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil && objects != nil {
+                // success
+                var entries = [Entry]()
+                for obj in objects {
+                    if let obj = obj as? PFObject {
+                        let e = Entry(fromPFObject: obj)
+                        entries.append(e)
+                    }
+                }
+                
+                completionHandler(entries, nil)
+            }
+            else {
+                // failed
+                completionHandler(nil, error)
+            }
+        }
+    }
+    
+    class func fetchWhiteListPopularEntries(duration: Duration, completionHandler: ([Entry]?, NSError?) -> Void) {
+        var query = PFQuery(className:"WhiteListEntry")
+        
+        query.orderByDescending("hatebu")
+        
+        if query.hasCachedResult() {
+            query.cachePolicy = kPFCachePolicyCacheThenNetwork
+        } else {
+            query.cachePolicy = kPFCachePolicyNetworkOnly
+        }
+        
+        // 期間を選択
+        var durationDate: NSDate?
+        
+        switch duration {
+        case .Today:
+            durationDate = NSDate(timeIntervalSinceNow: -day)
+            query.whereKey("posttime", greaterThan: durationDate)
+        case .ThisWeek:
+            durationDate = NSDate(timeIntervalSinceNow: -week)
+            query.whereKey("posttime", greaterThan: durationDate)
+        case .ThisMonth:
+            durationDate = NSDate(timeIntervalSinceNow: -month)
+            query.whereKey("posttime", greaterThan: durationDate)
+        case .All:
+            break
+        }
+        
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil && objects != nil {
+                // success
+                var entries = [Entry]()
+                for obj in objects {
+                    if let obj = obj as? PFObject {
+                        let e = Entry(fromPFObject: obj)
+                        entries.append(e)
+                    }
+                }
+                
+                completionHandler(entries, nil)
+            }
+            else {
+                // failed
+                completionHandler(nil, error)
             }
         }
     }
