@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-P3-Swe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="578"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="Mib-hp-PkG"/>
@@ -29,10 +29,9 @@
                                 <rect key="frame" x="0.0" y="578" width="375" height="40"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kuQ-as-lnJ">
-                                        <rect key="frame" x="42" y="5" width="290" height="31"/>
+                                        <rect key="frame" x="42" y="5" width="290" height="29"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="TnQ-wT-uyh"/>
-                                            <constraint firstAttribute="width" constant="290" id="iID-pH-yWc"/>
+                                            <constraint firstAttribute="height" constant="28" id="Sb5-IX-CQl"/>
                                         </constraints>
                                         <segments>
                                             <segment title="今日"/>
@@ -48,28 +47,45 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.96297474099266644" green="0.98173631905842418" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="kuQ-as-lnJ" secondAttribute="centerY" id="9Na-vt-oeH"/>
-                                    <constraint firstAttribute="height" constant="40" id="R0w-hG-GLG"/>
-                                    <constraint firstAttribute="centerX" secondItem="kuQ-as-lnJ" secondAttribute="centerX" constant="0.5" id="gOv-g6-xPP"/>
+                                    <constraint firstAttribute="height" constant="40" id="OnS-pF-vpq"/>
+                                    <constraint firstItem="kuQ-as-lnJ" firstAttribute="leading" secondItem="vIG-NQ-SXT" secondAttribute="leading" constant="42" id="RNa-SU-HDb"/>
+                                    <constraint firstAttribute="trailing" secondItem="kuQ-as-lnJ" secondAttribute="trailing" constant="43" id="f1U-5f-PzG"/>
+                                    <constraint firstAttribute="centerY" secondItem="kuQ-as-lnJ" secondAttribute="centerY" constant="1" id="pLF-4W-aIX"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nc3-P3-Swe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="JWz-IU-5lh"/>
-                            <constraint firstAttribute="trailing" secondItem="nc3-P3-Swe" secondAttribute="trailing" id="Oew-hb-eXQ"/>
+                            <constraint firstAttribute="trailing" secondItem="nc3-P3-Swe" secondAttribute="trailing" id="5nE-ua-VcO"/>
+                            <constraint firstItem="vIG-NQ-SXT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6Bz-92-9gz"/>
+                            <constraint firstItem="nc3-P3-Swe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8Nt-bD-GTQ"/>
+                            <constraint firstItem="vIG-NQ-SXT" firstAttribute="top" secondItem="nc3-P3-Swe" secondAttribute="bottom" id="AxJ-4f-AKz"/>
+                            <constraint firstItem="nc3-P3-Swe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="U22-Mg-EEz"/>
                             <constraint firstItem="vIG-NQ-SXT" firstAttribute="bottom" secondItem="nc3-P3-Swe" secondAttribute="bottom" constant="-49" id="UrZ-nv-4Ph"/>
-                            <constraint firstItem="nc3-P3-Swe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="WE5-Vs-feB"/>
-                            <constraint firstItem="vIG-NQ-SXT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iNP-9E-2ru"/>
+                            <constraint firstItem="nc3-P3-Swe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="WXh-HI-CEd"/>
+                            <constraint firstItem="kuQ-as-lnJ" firstAttribute="top" secondItem="nc3-P3-Swe" secondAttribute="bottom" id="X1z-BY-Sxm"/>
+                            <constraint firstItem="nc3-P3-Swe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ciS-ug-Oiy"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="jPE-jy-RYD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nc3-P3-Swe" secondAttribute="bottom" id="jk3-7L-2H7"/>
                             <constraint firstAttribute="bottom" secondItem="nc3-P3-Swe" secondAttribute="bottom" id="l1M-AN-Nzp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nc3-P3-Swe" secondAttribute="trailing" id="mGx-fZ-I7y"/>
+                            <constraint firstItem="vIG-NQ-SXT" firstAttribute="top" secondItem="nc3-P3-Swe" secondAttribute="bottom" constant="-1" id="njy-tv-CLf"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="ojK-WX-62O"/>
-                            <constraint firstAttribute="trailing" secondItem="vIG-NQ-SXT" secondAttribute="trailing" id="vR2-rh-Hvq"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="qTO-qN-crv"/>
+                            <constraint firstAttribute="trailing" secondItem="vIG-NQ-SXT" secondAttribute="trailing" id="wrN-1x-Vvj"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vIG-NQ-SXT" secondAttribute="bottom" id="yIK-8P-iOn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="WXh-HI-CEd"/>
+                                <exclude reference="ciS-ug-Oiy"/>
+                                <exclude reference="l1M-AN-Nzp"/>
+                                <exclude reference="mGx-fZ-I7y"/>
+                                <exclude reference="UrZ-nv-4Ph"/>
+                                <exclude reference="njy-tv-CLf"/>
+                                <exclude reference="X1z-BY-Sxm"/>
                                 <exclude reference="jPE-jy-RYD"/>
+                                <exclude reference="jk3-7L-2H7"/>
                                 <exclude reference="ojK-WX-62O"/>
                                 <exclude reference="yIK-8P-iOn"/>
                             </mask>
@@ -430,6 +446,6 @@
         <image name="upload-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x3O-DC-HOM"/>
+        <segue reference="E6K-VT-YCs"/>
     </inferredMetricsTieBreakers>
 </document>
