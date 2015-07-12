@@ -40,7 +40,7 @@ class WebViewController: CommonVC, UIWebViewDelegate {
     }
     
     private func setButtonStyle(button: UIButton) {
-        button.backgroundColor = UIColor.defaultBGColor(alpha: 0.8)
+        button.backgroundColor = UIColor.defaultBGColor(0.8)
         button.layer.cornerRadius = button.frame.size.width / 2
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.grayColor().CGColor
@@ -95,14 +95,14 @@ class WebViewController: CommonVC, UIWebViewDelegate {
         if let entry = entry {
             let basePath = "http://b.hatena.ne.jp/entry/"
             
-            var entryLink = entry.link as NSString
+            let entryLink = entry.link as NSString
             entryLink.stringByReplacingOccurrencesOfString("http://", withString: "")
             .stringByReplacingOccurrencesOfString("https://", withString: "",
-                options: nil,
+                options: [],
                 range: nil)
             
             let pageUrl = "\(basePath)\(entryLink)"
-            println(pageUrl)
+            print(pageUrl)
             
             webView.loadRequest(NSURLRequest(URL: NSURL(string: pageUrl)!))
         }

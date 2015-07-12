@@ -33,7 +33,7 @@ class FavActivity: UIActivity {
 
     override func prepareWithActivityItems(activityItems: [AnyObject]) {
         for item in activityItems {
-            println(item)
+            print(item)
             if item is Entry {
                 // お気に入りに追加する
                 FavHelper.sharedInstance.favEntry(item as! Entry)

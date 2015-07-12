@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("iDtRPfESeB15asGRjvPyvYOx9x4n2pj8bLhRSofK",
             clientKey: "CbBPV1Z6vjpZiNf7cj7IBvFNnzEijRNPEXRIeB2S")
         
-        let userNotificationTypes = UIUserNotificationType.Alert | .Badge | .Sound
+        let userNotificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, .Badge, .Sound]
         let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
@@ -62,16 +62,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         installation.setDeviceTokenFromData(deviceToken)
         installation.saveInBackgroundWithBlock { (success, error) -> Void in
             if let error = error {
-                println("error")
+                print("error")
             }
             else {
-                println("ready")
+                print("ready")
             }
         }
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        println("failed: \(error)")
+        print("failed: \(error)")
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {

@@ -33,12 +33,12 @@ class ReportActivity: UIActivity {
     
     override func prepareWithActivityItems(activityItems: [AnyObject]) {
         for item in activityItems {
-            println(item)
+            print(item)
             if item is Entry {
                 // 記事を報告する
                 ParseAPI.postReportEntry(item.objectId, completionHandler: { (isSuccess, error) -> Void in
                     if let error = error {
-                        println("error occured. \(error)")
+                        print("error occured. \(error)")
                     }
                     else {
                         let alert = UIAlertView()

@@ -23,7 +23,7 @@ class ParseAPI: NSObject {
 
     class func fetchNewEntries(completionHandler: ([Entry]?, NSError?) -> Void) {
         
-        var query = PFQuery(className:"Entry")
+        let query = PFQuery(className:"Entry")
         
         if ReviewHelper.sharedInstance.isReviewMode {
             self.fetchWhiteListNewEntries(completionHandler)
@@ -60,7 +60,7 @@ class ParseAPI: NSObject {
     
     class func fetchPopularEntries(duration: Duration, completionHandler: ([Entry]?, NSError?) -> Void) {
         
-        var query = PFQuery(className:"Entry")
+        let query = PFQuery(className:"Entry")
         
         if ReviewHelper.sharedInstance.isReviewMode {
             fetchWhiteListPopularEntries(duration, completionHandler: completionHandler)
@@ -143,7 +143,7 @@ class ParseAPI: NSObject {
     // MARK: - WhiteList Mode
     
     class func fetchWhiteListNewEntries(completionHandler: ([Entry]?, NSError?) -> Void) {
-        var query = PFQuery(className:"WhiteListEntry")
+        let query = PFQuery(className:"WhiteListEntry")
         
         query.orderByDescending("posttime")
         
@@ -173,7 +173,7 @@ class ParseAPI: NSObject {
     }
     
     class func fetchWhiteListPopularEntries(duration: Duration, completionHandler: ([Entry]?, NSError?) -> Void) {
-        var query = PFQuery(className:"WhiteListEntry")
+        let query = PFQuery(className:"WhiteListEntry")
         
         query.orderByDescending("hatebu")
         

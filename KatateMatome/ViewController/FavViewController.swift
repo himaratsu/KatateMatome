@@ -42,9 +42,7 @@ class FavViewController: CommonVC, UITableViewDataSource, UITableViewDelegate {
     private func setUpRefreshControl() {
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新",
-            attributes: [NSFontAttributeName:UIFont.systemFontOfSize(12),
-                kCTForegroundColorAttributeName:[UIColor.lightGrayColor().CGColor]
-            ])
+            attributes: [NSFontAttributeName:UIFont.systemFontOfSize(12)])
         
         self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
@@ -112,7 +110,7 @@ class FavViewController: CommonVC, UITableViewDataSource, UITableViewDelegate {
         }
         else {
             // NoCell
-            let cell = tableView.dequeueReusableCellWithIdentifier("NoCell") as! UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("NoCell") as! UITableViewCell!
             return cell
         }
     }

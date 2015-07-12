@@ -28,7 +28,7 @@ class SettingTableViewController: UITableViewController, UIActionSheetDelegate {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel!.font = UIFont.systemFontOfSize(15)
         
         switch indexPath.row {
@@ -67,7 +67,7 @@ class SettingTableViewController: UITableViewController, UIActionSheetDelegate {
             actionSheet.showInView(self.view)
         case 2:
             // FIXME: ライセンスの表示
-            println("do something...")
+            print("do something...")
         default:
             break
         }
@@ -102,7 +102,7 @@ class SettingTableViewController: UITableViewController, UIActionSheetDelegate {
                     UIApplication.sharedApplication().openURL(NSURL(string: encodedString!)!)
                 }
                 else {
-                    UIAlertView.showAlert(title: "LINEがインストールされていません！", message: "")
+                    UIAlertView.showAlert("LINEがインストールされていません！", message: "")
                 }
             }
         }

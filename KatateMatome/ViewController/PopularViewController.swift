@@ -39,9 +39,7 @@ class PopularViewController: CommonVC, UITableViewDataSource, UITableViewDelegat
     private func setUpRefreshControl() {
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "引っ張って更新",
-            attributes: [NSFontAttributeName:UIFont.systemFontOfSize(12),
-                kCTForegroundColorAttributeName:[UIColor.lightGrayColor().CGColor]
-            ])
+            attributes: [NSFontAttributeName:UIFont.systemFontOfSize(12)])
         
         self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
@@ -77,7 +75,7 @@ class PopularViewController: CommonVC, UITableViewDataSource, UITableViewDelegat
                     // cache miss ならスルー
                     return
                 }
-                UIAlertView.showAlert(title: "申し訳ありません", message: "データを取得できませんでした。")
+                UIAlertView.showAlert("申し訳ありません", message: "データを取得できませんでした。")
             }
             else {
                 if let entries = entries {
